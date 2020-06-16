@@ -25,7 +25,7 @@ const TrendingBannerRoutes = require('./routes/trendingBanner');
 const app = express();
 
 //db
-mongoose.connect(process.env.DATABASE, {
+mongoose.connect(`mongodb+srv://${process.env.username}:${process.env.password}@cluster0-b73ox.mongodb.net/Cluster0?retryWrites=true&w=majority`, {
     useNewUrlParser:true,
     useCreateIndex:true,
     useUnifiedTopology:true,
